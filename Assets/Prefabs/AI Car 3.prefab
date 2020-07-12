@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   limiter: 0.1
-  acceleration: 15
+  acceleration: 300
 --- !u!54 &4502164075400817068
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -389,7 +389,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6024599800222861691}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: 0.8
   m_AngularDrag: 1
   m_UseGravity: 1

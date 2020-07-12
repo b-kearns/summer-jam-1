@@ -10,6 +10,8 @@ public class CarSpawning : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawnInterval = Random.Range(1.5f, 5f);
+
         InvokeRepeating("SpawnCar", spawnInterval, spawnInterval);
     }
 

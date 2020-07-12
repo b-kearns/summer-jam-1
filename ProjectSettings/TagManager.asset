@@ -7,6 +7,8 @@ TagManager:
   - Spawner
   - AI
   - Destroyer
+  - Ground
+  - City
   layers:
   - Default
   - TransparentFX
