@@ -36,7 +36,15 @@ public class CarGroup : MonoBehaviour
     {
         foreach (var car in cars)
         {
+            car.GetComponent<CarMovement>().move = false;
+        }
+    }
 
+    public void StartMovement()
+    {
+        foreach (var car in cars)
+        {
+            car.GetComponent<CarMovement>().move = true;
         }
     }
 }
