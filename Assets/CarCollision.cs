@@ -15,7 +15,7 @@ public class CarCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collision.gameObject.CompareTag("Ground"))
+        if (!collision.collider.CompareTag("Ground"))
         { 
             explosion.SetActive(true);
             gameOver.OnCrash();
