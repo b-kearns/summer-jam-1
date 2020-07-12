@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CarMovement : MonoBehaviour
 {
-    public bool move = true;
+    public bool move = false;
 
     private Rigidbody parentBody;
     public Rigidbody body;
@@ -22,12 +22,15 @@ public class CarMovement : MonoBehaviour
 
     private void Start()
     {
+        move = false;
         movementVector = Vector3.zero;
     }
 
     private void FixedUpdate()
     {
-        if (move) { transform.Translate(Vector3.forward * 0.05f); }
+        if (!move) { return; }
+
+        transform.Translate(Vector3.forward * 0.05f);
 
         body.AddRelativeForce(Vector3.forward * acceleration * movementDirection);
         body.AddRelativeForce(Vector3.right * acceleration * strafeDirection);
