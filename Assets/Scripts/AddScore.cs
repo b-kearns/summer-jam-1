@@ -6,6 +6,8 @@ public class AddScore : MonoBehaviour
 {
     [SerializeField] public Score score;
 
+    public AudioSource sfx;
+
     private void Start()
     {
         score = GameObject.FindGameObjectWithTag("GameController").GetComponent<Score>();
@@ -16,6 +18,7 @@ public class AddScore : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("score");
+            sfx.Play();
             score.playerScore += 100;
         }
     }

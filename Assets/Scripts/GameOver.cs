@@ -41,7 +41,7 @@ public class GameOver : MonoBehaviour
             PlayerPrefs.Save();
         }
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

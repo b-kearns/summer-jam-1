@@ -7,6 +7,8 @@ public class CarCollision : MonoBehaviour
     [SerializeField] public GameObject explosion;
     [SerializeField] public GameOver gameOver;
 
+    public AudioSource crashSFX;
+
     void Start()
     {
         explosion.SetActive(false);
@@ -16,8 +18,11 @@ public class CarCollision : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (!collision.collider.CompareTag("Ground"))
-        { 
+        {
+            crashSFX.Play();
+
             explosion.SetActive(true);
+
             gameOver.OnCrash();
         }
     }
