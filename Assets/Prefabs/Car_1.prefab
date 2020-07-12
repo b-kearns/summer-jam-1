@@ -41,11 +41,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6b0b49e3247aa95439e89c8103defae3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.05
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -158,6 +158,7 @@ Transform:
   m_Children:
   - {fileID: 4896189170759822530}
   - {fileID: 5630475620957193802}
+  - {fileID: 1490195307293699831}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -220,8 +221,8 @@ Transform:
   m_LocalPosition: {x: -0.112, y: 1, z: 0}
   m_LocalScale: {x: 0.11873311, y: 0.11873311, z: 0.11873311}
   m_Children: []
-  m_Father: {fileID: 4896189170759822530}
-  m_RootOrder: 4
+  m_Father: {fileID: 2772539591022320465}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &56581395664041597
 Animator:

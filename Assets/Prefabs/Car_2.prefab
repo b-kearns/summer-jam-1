@@ -41,11 +41,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6b0b49e3247aa95439e89c8103defae3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.05
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -174,6 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fac5feee81f5084188f5b726e99ba3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: 0
   body: {fileID: 8661735354414663156}
   acceleration: 300
   rotationSpd: 0.65
@@ -190,6 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 4027556975038662019}
+  gameOver: {fileID: 0}
 --- !u!1 &4027556975038662019
 GameObject:
   m_ObjectHideFlags: 0
