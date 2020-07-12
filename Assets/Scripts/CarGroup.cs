@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CarGroup : MonoBehaviour
 {
-    [SerializeField] public Camera camera;
+    [SerializeField] public Camera camera = null;
     public float yOffset = 15f;
     public float zOffset = 15f;
 
@@ -18,15 +18,15 @@ public class CarGroup : MonoBehaviour
 
     private Vector3 FindCenter()
     {
-        Vector3 center = transform.position;
+        Vector3 center = Vector3.zero;
 
         if (cars.Length == 0) { return Vector3.zero; }
-        else if (cars.Length == 1) { return cars[0].transform.position; }
+        else if (cars.Length == 1) { return cars[0].transform.localPosition; }
 
         foreach (var car in cars)
         {
-            center.x += car.transform.position.x;
-            center.z += car.transform.position.z;
+            center.x += car.transform.localPosition.x;
+            center.z += car.transform.localPosition.z;
         }
 
         return center / cars.Length;
