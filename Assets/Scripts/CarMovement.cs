@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CarMovement : MonoBehaviour
 {
-    private Rigidbody body;
+    private Rigidbody parentBody;
+    public Rigidbody body;
 
     private Vector3 movementVector;
 
@@ -12,22 +13,22 @@ public class CarMovement : MonoBehaviour
     public float rotationSpd = 0.5f;
 
     private float movementDirection;
-    private float rotationDirection;
+    private float strafeDirection;
 
     private float currentSpd;
     private int isMoving;
 
     private void Start()
     {
-        body = GetComponent<Rigidbody>();
         movementVector = Vector3.zero;
     }
 
     private void FixedUpdate()
     {
-        body.AddRelativeForce(Vector3.forward * movementDirection * acceleration);
+        transform.Translate(Vector3.forward * 0.05f);
 
-        if (body.velocity.magnitude != 0) { transform.Rotate(Vector3.up * rotationDirection * rotationSpd); }
+        body.AddRelativeForce(Vector3.forward * acceleration * movementDirection);
+        body.AddRelativeForce(Vector3.right * acceleration * strafeDirection);
     }
 
     public void SetAcceleration(float inputValue)
@@ -37,6 +38,6 @@ public class CarMovement : MonoBehaviour
 
     public void SetRotation(float inputValue)
     {
-        rotationDirection = inputValue;
+        strafeDirection = inputValue;
     }
 }
