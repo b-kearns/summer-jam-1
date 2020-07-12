@@ -31,4 +31,12 @@ public class CarGroup : MonoBehaviour
 
         return center / cars.Length;
     }
+
+    public void StopMovement()
+    {
+        foreach (var car in cars)
+        {
+
+        }
+    }
 }

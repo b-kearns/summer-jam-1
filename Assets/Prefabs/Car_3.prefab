@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 2772539591022320463}
   - component: {fileID: 6183389197157233256}
   m_Layer: 0
-  m_Name: Car
+  m_Name: Car_3
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,7 +386,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dcb58f9254849a84ab1f7d5519e701b1, type: 2}
+      objectReference: {fileID: 2100000, guid: 9fd16aa9031be7944ad5827d0cb7e113, type: 2}
     - target: {fileID: 919132149155446097, guid: e19bbee192fd63e4bb5a4c8eb7b776f1,
         type: 3}
       propertyPath: m_Name
