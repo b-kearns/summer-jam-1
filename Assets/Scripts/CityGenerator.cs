@@ -32,6 +32,6 @@ public class CityGenerator : MonoBehaviour
         cityBlocks.Enqueue(newObject);
 
         if (cityBlocks.Count > 2) { GameObject.Destroy(cityBlocks.Dequeue()); }
-        Debug.Log("# of CityBlocks :: " + cityBlocks.Count);
+        //Debug.Log("# of CityBlocks :: " + cityBlocks.Count);
     }
 }
