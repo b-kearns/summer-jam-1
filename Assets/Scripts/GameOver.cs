@@ -14,7 +14,7 @@ public class GameOver : MonoBehaviour
 
     void Start()
     {
-        carGroup = GameObject.FindGameObjectWithTag("Cars").GetComponent<CarGroup>();
+        //carGroup = GameObject.FindGameObjectWithTag("Cars").GetComponent<CarGroup>();
     }
 
     private void Update()
@@ -35,6 +35,12 @@ public class GameOver : MonoBehaviour
 
     IEnumerator reset()
     {
+        if (GetComponent<Score>().playerScore > PlayerPrefs.GetFloat("Highscore"))
+        {
+            PlayerPrefs.SetFloat("Highscore", GetComponent<Score>().playerScore);
+            PlayerPrefs.Save();
+        }
+
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

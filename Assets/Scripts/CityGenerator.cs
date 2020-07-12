@@ -7,7 +7,7 @@ public class CityGenerator : MonoBehaviour
     public GameObject chunkPrefab;
     public GameObject carGroup;
 
-    private LinkedList<GameObject> cityBlocks;
+    private Queue<GameObject> cityBlocks = new Queue<GameObject>();
 
     private float nextChunk = 0;
     // Start is called before the first frame update
@@ -28,6 +28,10 @@ public class CityGenerator : MonoBehaviour
 
     public void SpawnCars()
     {
-        GameObject.Instantiate(carGroup, this.transform);
+        var newObject = GameObject.Instantiate(carGroup, this.transform);
+        cityBlocks.Enqueue(newObject);
+
+        if (cityBlocks.Count > 2) { GameObject.Destroy(cityBlocks.Dequeue()); }
+        Debug.Log("# of CityBlocks :: " + cityBlocks.Count);
     }
 }
