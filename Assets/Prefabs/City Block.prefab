@@ -2678,6 +2678,7 @@ MonoBehaviour:
   zMax: 24
   obstacles:
   - {fileID: 5881378375045207025, guid: dbb7f6c7a4c21c642a83f5e7942873c0, type: 3}
+  - {fileID: 5881378375045207025, guid: 53be47a1bb3fa784f911d55607bd7cbf, type: 3}
 --- !u!65 &1498829629233667039
 BoxCollider:
   m_ObjectHideFlags: 0
