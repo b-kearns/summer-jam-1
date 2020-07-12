@@ -5,10 +5,12 @@ using UnityEngine;
 public class CarCollision : MonoBehaviour
 {
     [SerializeField] public GameObject explosion;
+    [SerializeField] public GameOver gameOver;
 
     void Start()
     {
         explosion.SetActive(false);
+        gameOver = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameOver>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -18,6 +20,7 @@ public class CarCollision : MonoBehaviour
         else
         {
             explosion.SetActive(true);
+            gameOver.OnCrash();
         }
     }
 }
