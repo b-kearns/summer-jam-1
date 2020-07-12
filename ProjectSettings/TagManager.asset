@@ -9,6 +9,7 @@ TagManager:
   - Destroyer
   - Ground
   - City
+  - Cars
   layers:
   - Default
   - TransparentFX

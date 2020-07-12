@@ -10,11 +10,26 @@ public class GameOver : MonoBehaviour
 {
     public GameObject scoreUI;
     public GameObject gameOverUI;
+    [SerializeField] public CarGroup carGroup;
+
+    void Start()
+    {
+        carGroup = GameObject.FindGameObjectWithTag("Cars").GetComponent<CarGroup>();
+    }
+
+    private void Update()
+    {
+        if (carGroup == null)
+        {
+            carGroup = GameObject.FindGameObjectWithTag("Cars").GetComponent<CarGroup>();
+        }
+    }
 
     public void OnCrash()
     {
         scoreUI.SetActive(false);
         gameOverUI.SetActive(true);
+        carGroup.StopMovement();
         StartCoroutine(reset());
     } 
 

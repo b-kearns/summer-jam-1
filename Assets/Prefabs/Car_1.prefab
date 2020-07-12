@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fac5feee81f5084188f5b726e99ba3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: 0
   body: {fileID: 8661735354414663156}
   acceleration: 300
   rotationSpd: 0.65
@@ -183,12 +184,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2772539591022320464}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7855124745f759347bc0593cde27fcc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 4027556975038662019}
+  gameOver: {fileID: 0}
 --- !u!1 &4027556975038662019
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 4027556975038662019}
+  gameOver: {fileID: 0}
 --- !u!1001 &4933829050121423657
 PrefabInstance:
   m_ObjectHideFlags: 0
